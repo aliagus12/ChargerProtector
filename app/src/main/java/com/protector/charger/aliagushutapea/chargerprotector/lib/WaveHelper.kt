@@ -1,7 +1,6 @@
 package com.protector.charger.aliagushutapea.chargerprotector.lib
 
 import android.animation.Animator
-import com.gelitenight.waveview.library.WaveView
 import android.view.animation.LinearInterpolator
 import android.animation.ValueAnimator
 import android.animation.ObjectAnimator
@@ -18,7 +17,7 @@ class WaveHelper(private val waveView: WaveView) {
     }
 
     fun start() {
-        waveView.isShowWave = true
+        waveView.setShowWave(true)
         animatorSet?.start()
     }
 

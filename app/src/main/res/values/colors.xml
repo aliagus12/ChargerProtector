@@ -3,4 +3,22 @@
     <color name="colorPrimary">#008577</color>
     <color name="colorPrimaryDark">#00574B</color>
     <color name="colorAccent">#D81B60</color>
+    <color name="blue">#b8f1ed</color>
+    <color name="grey">#44FFFFFF</color>
+
+    <color name="red">#FF5252</color>
+    <color name="redDark">#FF1744</color>
+    <color name="redDark1">#D50000</color>
+    <color name="redBorderColor">#C62828</color>
+
+    <color name="green">#B2FF59</color>
+    <color name="greenDark">#76FF03</color>
+    <color name="greenDark1">#64DD17</color>
+    <color name="greenBorderColor">#558B2F</color>
+
+    <color name="yellow">#FFF000</color>
+    <color name="yellowDark">#FFEA00</color>
+    <color name="yellowDark1">#FFD600</color>
+    <color name="yellowBorderColor">#F9A825</color>
+
 </resources>

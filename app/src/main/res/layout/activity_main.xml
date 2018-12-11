@@ -2,18 +2,135 @@
 <android.support.constraint.ConstraintLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
         tools:context=".MainActivity">
 
-    <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Hello World!"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="parent"/>
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <com.protector.charger.aliagushutapea.chargerprotector.lib.WaveView
+                android:id="@+id/waveView"
+                android:layout_width="300dp"
+                android:layout_height="300dp"
+                android:layout_centerInParent="true"
+        />
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/_txt_battery_level"
+                android:textSize="50sp"
+                tools:text="99%"
+                android:layout_centerInParent="true"
+                android:textColor="@android:color/white"
+                android:gravity="center"
+        />
+
+        <SeekBar
+                android:id="@+id/seekBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignTop="@+id/border"
+                android:layout_alignBottom="@+id/border"
+                android:layout_below="@+id/shape"
+                android:layout_toEndOf="@+id/border"
+                android:visibility="gone"
+                android:max="50"
+                android:progress="10"/>
+
+        <TextView
+                android:id="@+id/border"
+                android:visibility="gone"
+                android:layout_width="60dp"
+                android:layout_height="32dp"
+                android:gravity="center_vertical"
+                android:layout_below="@+id/shape"
+                android:text="@string/border"/>
+
+        <TextView
+                android:id="@+id/shape"
+                android:layout_width="60dp"
+                android:layout_height="32dp"
+                android:gravity="center_vertical"
+                android:visibility="gone"
+                android:text="@string/shape"/>
+
+        <RadioGroup
+                android:id="@+id/shapeChoice"
+                android:visibility="gone"
+                android:layout_alignTop="@+id/shape"
+                android:layout_toEndOf="@+id/shape"
+                android:layout_marginStart="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+            <RadioButton
+                    android:id="@+id/shapeCircle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:text="@string/circle"/>
+
+            <RadioButton
+                    android:id="@+id/shapeSquare"
+                    android:layout_marginStart="16dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/square"/>
+        </RadioGroup>
+
+        <TextView
+                android:id="@+id/color"
+                android:layout_width="60dp"
+                android:layout_height="32dp"
+                android:gravity="center_vertical"
+                android:visibility="gone"
+                android:layout_below="@+id/border"
+                android:text="@string/color"/>
+
+        <RadioGroup
+                android:id="@+id/colorChoice"
+                android:visibility="gone"
+                android:layout_below="@id/color"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+            <RadioButton
+                    android:id="@+id/colorGreen"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:textColor="@color/green"
+                    android:checked="true"
+                    android:text="@string/green"/>
+
+            <RadioButton
+                    android:id="@+id/colorRed"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:textColor="@color/red"
+                    android:text="@string/red"/>
+
+            <RadioButton
+                    android:id="@+id/colorBlue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:textColor="@color/blue"
+                    android:text="@string/blue"/>
+
+        </RadioGroup>
+
+    </RelativeLayout>
 
 </android.support.constraint.ConstraintLayout>
